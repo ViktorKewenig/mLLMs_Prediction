@@ -1,25 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 29 11:15:44 2023
-
-@author: Viktor
-"""
-
-
-# Set the  filename 
-file = 'GPT_multimodal.csv'  #change for other files 
-
-
-# Write updated_filtered_data to the CSV file
-with open(file, 'w', newline='') as csvfile:
-    writer = csv.DictWriter(csvfile, fieldnames=['ID', 'Response', 'Video', 'Model_Response'])
-    writer.writeheader()
-    for entry in final_dict:
-        writer.writerow(entry)
-
-print(f'Updated data has been written to {output_file}.')
-
 ##############################
 ####### PRINT CORRS ##########
 ##############################
