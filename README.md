@@ -5,7 +5,7 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 ## Usage
 
 ### Extracting Prediction Scores
-1. **Download Llama**: download and extract [llama](https://huggingface.co/huggyllama/llama-7b) into the "Extract Prediction Scores" folder. Download the [llama-adapter](https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/llama_adapter_v2_multimodal7b) into the adapter folder in the same directory.
+1. **Download Llama**: download and extract [LLaMA](https://huggingface.co/huggyllama/llama-7b) into the "Extract Prediction Scores" folder. Download the [LLaMA-Adapter](https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/llama_adapter_v2_multimodal7b) into the adapter folder in the same directory.
 2. **Set OpenAI API Key Variable**: having an openAI API key is necessary for accessing GPT-4 and GPT-4 multimodal. If you have one, set it as an environmental variable.
 3. **Install Requirements**: pip install the requirements.txt file (add requirements for the CLIP model if not already done so). 
 4. **Run**: run the code for each model individually
@@ -25,8 +25,8 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 
 ### Dependencies
 1. **Software**: This has been tested running on the following packages: Sci-Py (version 1.13), Numpy (version 1.26), Pandas (version 2.2.1), Statsmodels (version 0.14.1), Pytorch (version 2.2), Llama (version 0.1.1), Openai (version 1.16.2), Transformers (version 4.39.3).
-2. **Hardware**: The use of GPUs speeds up the extraction of predictions process but is not necessary (simply change device to "cpu").
+2. **Hardware**: The use of GPUs speeds up the extraction of predictions process but is not necessary (simply change the device to "cpu" or "cuda" as appropriate).
 
 ### Runtime
-Depending on the hardware runtime can vary. Assuming a standard CPU based desktop computer, extracting predictions with the given examples may take up to 2 hours for the larger model llama. The expected output is a list with the label and a prediction score for each segment. 
+Depending on the hardware runtime can vary. Assuming a standard CPU based desktop computer, extracting predictions with the given examples may take up to 2 hours for the larger LLaMA model. The expected output is a list with the label and a prediction score for each segment. 
 All data analyses should not take longer than 1 hour to complete. 
