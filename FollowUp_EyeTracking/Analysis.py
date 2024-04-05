@@ -4,7 +4,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
 # Load the CSV file
-categorical_data = pd.read_csv("categorical_data_1.csv")
+categorical_data = pd.read_csv("categorical_data_example.csv")
 categorical_data = categorical_data.loc[:, ~categorical_data.columns.str.contains('^Unnamed')]
 
 # load correlations by word and segment
