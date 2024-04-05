@@ -15,7 +15,7 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 2. **Plot**: install dependencies (Matplotlib) and run the code to plot scatterplots. 
 
 ### Eyetracking Analysis
-1. **Heatmap Creation**: this script takes the eye-tracking data provided by the Gorilla online experiment builder (gorilla.sc) and transforms it into normalised and smoothed numpy heatmaps.
+1. **Heatmap Creation**: this script takes the eye-tracking data provided by the [Gorilla online experiment builder](gorilla.sc) and transforms it into normalised and smoothed numpy heatmaps.
 2. **Heatmap Comparison**: this script compares eye-tracking data with the attention maps extracted from the CLIP model in step (1) "Extracting Prediction Scores".
 3. **Data Availability**: all anonymised eye-tracking data will be available under this link: https://osf.io/6whzq/?view_only=162085f95bab42b5a57b34b386143ba8 (upon publication).
 
