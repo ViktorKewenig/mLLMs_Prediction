@@ -24,4 +24,5 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 2. **Data Availability**: all anonymised data from this follow-up experiment will be available under this [link](https://osf.io/6whzq/?view_only=162085f95bab42b5a57b34b386143ba8) (upon publication).
 
 ### Dependencies
-This has been tested running on the following packages: Sci-Py (version 1.13), Numpy (version 1.26), Pandas (version 2.2.1), Statsmodels (version 0.14.1), Pytorch (version 2.2), Llama (version 0.1.1), Openai (version 1.16.2), Transformers (version 4.39.3)
+1. **Software**: This has been tested running on the following packages: Sci-Py (version 1.13), Numpy (version 1.26), Pandas (version 2.2.1), Statsmodels (version 0.14.1), Pytorch (version 2.2), Llama (version 0.1.1), Openai (version 1.16.2), Transformers (version 4.39.3).
+2. **Hardware**: The use of GPUs speeds up the extraction of predictions process but is not necessary (simply change device to "cpu"). 
