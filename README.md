@@ -22,3 +22,6 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 ### Follow-Up Eyetracking Analysis
 1. **Analysis**: we ran a follow-up analysis with human participants to test whether presence of salient visual cues predict overlap scores between human- and model attention patterns. You can run "Analysis.py" with the provided sample data.
 2. **Data Availability**: all anonymised data from this follow-up experiment will be available under this [link](https://osf.io/6whzq/?view_only=162085f95bab42b5a57b34b386143ba8) (upon publication).
+
+### Dependencies
+This has been tested running on the following packages: Sci-Py (version 1.13), Numpy (version 1.26), Pandas (version 2.2.1), Statsmodels (version 0.14.1), Pytorch (version 2.2), Llama (version 0.1.1), Openai (version 1.16.2), Transformers (version 4.39.3)
