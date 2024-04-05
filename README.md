@@ -5,7 +5,7 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 ## Usage
 
 ### Extracting Prediction Scores
-1. **Download Llama**: download and extract llama into the "Extract Prediction Scores" folder. Download the llama-adapter into the adapter folder in the same directory.
+1. **Download Llama**: download and extract [llama] ("https://huggingface.co/huggyllama/llama-7b") into the "Extract Prediction Scores" folder. Download the [llama-adapter] ("https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/llama_adapter_v2_multimodal7b") into the adapter folder in the same directory.
 2. **Set OpenAI API Key Variable**: having an openAI API key is necessary for accessing GPT-4 and GPT-4 multimodal. If you have one, set it as an environmental variable.
 3. **Install Requirements**: pip install the requirements.txt file (add requirements for the CLIP model if not already done so). 
 4. **Run**: run the code for each model individually
