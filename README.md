@@ -25,4 +25,8 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 
 ### Dependencies
 1. **Software**: This has been tested running on the following packages: Sci-Py (version 1.13), Numpy (version 1.26), Pandas (version 2.2.1), Statsmodels (version 0.14.1), Pytorch (version 2.2), Llama (version 0.1.1), Openai (version 1.16.2), Transformers (version 4.39.3).
-2. **Hardware**: The use of GPUs speeds up the extraction of predictions process but is not necessary (simply change device to "cpu"). 
+2. **Hardware**: The use of GPUs speeds up the extraction of predictions process but is not necessary (simply change device to "cpu").
+
+### Runtime
+Depending on the hardware runtime can vary. Assuming a standard CPU based Desktop Computer, extracting predictions may take up to 6 hours for the larger model llama.
+All data analyses should not take longer than 1 hour to complete. 
