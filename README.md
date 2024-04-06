@@ -6,9 +6,10 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 
 ### Extracting Prediction Scores
 1. **Download Llama**: download and extract [LLaMA](https://huggingface.co/huggyllama/llama-7b) into the "Extract Prediction Scores" folder. Download the [LLaMA-Adapter](https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/llama_adapter_v2_multimodal7b) into the adapter folder in the same directory.
-2. **Set OpenAI API Key Variable**: having an openAI API key is necessary for accessing GPT-4 and GPT-4 multimodal. If you have one, set it as an environmental variable.
-3. **Install Requirements**: pip install the requirements.txt file (add requirements for the CLIP model if not already done so). 
-4. **Run**: run the code for each model individually
+2. **Modify CLIP**: Modify the call to nn.MultiheadAttention in model.py to pass need_weights=True (to record attention weights). 
+3. **Set OpenAI API Key Variable**: having an openAI API key is necessary for accessing GPT-4 and GPT-4 multimodal. If you have one, set it as an environmental variable.
+4. **Install Requirements**: pip install the requirements.txt file (add requirements for the CLIP model if not already done so). 
+5. **Run**: run the code for each model individually
 
 ### Comparing Prediction Scores
 1. **Example Data**: you can run "Analysis.py" to compare and plot extracted prediction scores from GPT-4 and human data (skipping the extraction step). Exemplary data is provided in the directory.
