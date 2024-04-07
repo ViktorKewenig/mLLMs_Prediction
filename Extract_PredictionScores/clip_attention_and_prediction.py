@@ -13,8 +13,6 @@ import torch
 
 print("Torch version:", torch.__version__)
 
-pip install ftfy
-
 from clip import clip
 
 for i,m in enumerate(clip.available_models()):
