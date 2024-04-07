@@ -50,7 +50,7 @@ def get_attention_maps(image_input, model):
     def attn_hook(layer_num):
         def hook(module, input, output):
 #            print(f"Hook in layer {layer_num} triggered")
-            attention_weights = output[1].detach().cpu()  # output[1] contains the attention weights
+            attention_weights = output[0].detach().cpu()  # output[1] contains the attention weights
             if layer_num not in layer_attention_maps:
                 layer_attention_maps[layer_num] = []
             layer_attention_maps[layer_num].append(attention_weights)
@@ -69,8 +69,8 @@ def get_attention_maps(image_input, model):
     return layer_attention_maps
 
 def forward_func(image_input, text_input, model):
-    image_features = model.encode_image(image_input)[0]  #first of tuple, because now weights are also part of output
-    text_features = model.encode_text(text_input)[0]
+    image_features = model.encode_image(image_input)
+    text_features = model.encode_text(text_input)
     # Calculate similarity as dot product
     similarity = (image_features @ text_features.T).softmax(dim=-1)
     return similarity
