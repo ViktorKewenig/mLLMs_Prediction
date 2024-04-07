@@ -11,7 +11,7 @@ def apply_gaussian_smoothing_model(heatmap, sigma=30):
     return gaussian_filter(heatmap, sigma=sigma)
 
 def calculate_probability_distribution(heatmap, show_plot=True):
-#    heatmap = apply_gaussian_smoothing(heatmap) #this is done before already 
+    heatmap = apply_gaussian_smoothing(heatmap) #this is done before already 
     # Replace NaNs with 0 for probability distribution calculation
     prob_distribution = np.nan_to_num(heatmap.flatten(), nan=0.0)
     
@@ -39,7 +39,7 @@ def calculate_probability_distribution_model(heatmap, show_plot=True):
     
   
     # Apply the threshold
-    heatmap[heatmap < threshold_value] = 0.X # set if necessary
+    heatmap[heatmap < threshold_value] = 0.0 # set if necessary
     
     # Flatten the heatmap and replace NaNs with 0 for probability distribution calculation
     prob_distribution = np.nan_to_num(heatmap.flatten(), nan=0.0)
@@ -84,12 +84,14 @@ correlations_by_segment = {}
 import os
 import glob
 import numpy as np
+import warnings
+
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Define previously mentioned functions here again if necessary
 
-human_folder_path = "Numpy_Attention_Matrices_normalised"
-model_folder_path = "Numpy_Attention_layerwise"
-
+human_folder_path = "Eyetracking_Analysis/Numpy_Attention_Matrices_normalised"
+model_folder_path = "Eyetracking_Analysis/Numpy_Attention_layerwise"
 correlations_by_word_segment_layer = {}
 
 # Loop over segment numbers and layers
@@ -143,7 +145,7 @@ for segment_number in range(1, 16):
             
 
 # Save correlations for each layer
-save_path = "correlations_by_layer"
+save_path = "results/correlations_by_layer"
 os.makedirs(save_path, exist_ok=True)
 
 for key, (pearson_corr, spearman_corr) in correlations_by_word_segment_layer.items():
@@ -156,8 +158,8 @@ for key, (pearson_corr, spearman_corr) in correlations_by_word_segment_layer.ite
 
 
 #### LOAD FILES
-average_correlations = np.load("average_correlations.npy", allow_pickle=True).item()
-correlations_by_word_segment_layer = np.load("correlations_by_word_segment_layer.npy",allow_pickle=True).item()
+average_correlations = np.load("Eyetracking_Analysis/average_correlations.npy", allow_pickle=True).item()
+#correlations_by_word_segment_layer = np.load("correlations_by_word_segment_layer.npy",allow_pickle=True).item()
 
 
 ###############################
@@ -238,6 +240,8 @@ for layer, correlations in layerwise_correlations.items():
     print(f"  Direct Pearson correlation: {direct_correlation_pearson}, P-value: {p_value_pearson}")
     print(f"  Direct Spearman correlation: {direct_correlation_spearman}, P-value: {p_value_spearman}")
 
+    # Interpretation of the results
+    # Interpretation code here (similar to what you have already provided)
     # Interpret the Pearson result
     if p_value_pearson < 0.05:
         print("The direct Pearson correlation is statistically significant.")
@@ -273,7 +277,7 @@ from collections import defaultdict
 
 # Load the dictionaries
 # correlations_by_word_segment_layer = np.load("correlations_by_word_segment_layer.npy", allow_pickle=True).item()
-average_correlations = np.load("average_correlations.npy", allow_pickle=True).item()
+average_correlations = np.load("Eyetracking_Analysis/average_correlations.npy", allow_pickle=True).item()
 
 # Function to separate and filter correlations by layer
 def separate_and_filter_by_layer(correlations_dict, average_dict):
@@ -404,7 +408,7 @@ import numpy as np
 from collections import defaultdict
 
 # Load the CSV file
-df = pd.read_csv("CLIP.csv")
+df = pd.read_csv("Eyetracking_Analysis/CLIP.csv")
 
 # Calculate the 75th percentile (top 25%) for "Model_Response" and "Response"
 threshold_model_response = df["Model_Response"].quantile(0.75)
@@ -421,7 +425,7 @@ top_video_words_dict = {word: True for word in top_video_words}
 
 # Load the dictionaries
 #correlations_by_word_segment_layer = np.load("correlations_by_word_segment_layer.npy", allow_pickle=True).item()
-average_correlations = np.load("average_correlations.npy", allow_pickle=True).item()
+average_correlations = np.load("Eyetracking_Analysis/average_correlations.npy", allow_pickle=True).item()
 
 # Function to separate correlations by layer
 def separate_by_layer(correlations_dict):
@@ -487,7 +491,7 @@ import numpy as np
 from collections import defaultdict
 
 # Load the CSV file
-df = pd.read_csv("CLIP.csv")
+df = pd.read_csv("Eyetracking_Analysis/CLIP.csv")
 
 # Calculate the 75th percentile (top 25%) for "Model_Response" and "Response"
 threshold_model_response = df["Model_Response"].quantile(0.75)
@@ -504,7 +508,7 @@ top_video_words_dict = {word: True for word in top_video_words}
 
 # Load the dictionaries
 #correlations_by_word_segment_layer = np.load("correlations_by_word_segment_layer.npy", allow_pickle=True).item()
-average_correlations = np.load("average_correlations.npy", allow_pickle=True).item()
+average_correlations = np.load("Eyetracking_Analysis/average_correlations.npy", allow_pickle=True).item()
 
 # Function to separate correlations by layer
 def separate_by_layer(correlations_dict):
@@ -569,7 +573,7 @@ import numpy as np
 from collections import defaultdict
 
 # Load the CSV file
-df = pd.read_csv("CLIP.csv")
+df = pd.read_csv("Eyetracking_Analysis/CLIP.csv")
 
 # Calculate the 75th percentile (top 100%) for "Model_Response" and "Response"
 threshold_model_response = df["Model_Response"].quantile(0.0)
@@ -586,7 +590,7 @@ top_video_words_dict = {word: True for word in top_video_words}
 
 # Load the dictionaries
 #correlations_by_word_segment_layer = np.load("correlations_by_word_segment_layer.npy", allow_pickle=True).item()
-average_correlations = np.load("average_correlations.npy", allow_pickle=True).item()
+average_correlations = np.load("Eyetracking_Analysis/average_correlations.npy", allow_pickle=True).item()
 
 # Function to separate correlations by layer
 def separate_by_layer(correlations_dict):
