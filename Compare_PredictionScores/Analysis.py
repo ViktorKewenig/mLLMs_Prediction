@@ -9,7 +9,7 @@ import pandas as pd
 import scipy.stats
 
 # List of CSV files
-csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"]
+csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"] #edit to "GPT_multimodal.csv" only for demo
 
 for file in csv_files:
     # Read the CSV file
@@ -66,7 +66,7 @@ def bootstrap_correlation(data, n_iterations=1000):
     return pearson_corrs, spearman_corrs
 
 # List of CSV files
-csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"]
+csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"] #edit to "GPT_multimodal.csv" only for dem
 
 # Iterate over each file and calculate bootstrapped correlations
 for file in csv_files:
@@ -97,7 +97,7 @@ import pandas as pd
 from scipy.stats import pearsonr
 
 # List of CSV files
-csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"]
+csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"] #edit to "GPT_multimodal.csv" only for dem
 
 for file in csv_files:
     # Read the CSV file
@@ -164,7 +164,7 @@ def bootstrap_top_quartile_correlation(data, n_iterations=1000):
     return top_quartile_corrs
 
 # List of CSV files
-csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"]
+csv_files = ["GPT_multimodal.csv", "GPT_unimodal.csv", "CLIP_ViT32.csv", "CLIP_RN50.csv", "llama_multimodal.csv", "llama_unimodal.csv", "CLIP_Vit32_unimodal.csv"] #edit to "GPT_multimodal.csv" only for dem
 
 for file in csv_files:
     # Read the CSV file
