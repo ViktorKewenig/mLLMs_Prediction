@@ -318,7 +318,7 @@ def plot_data(file, sqrt_transform=False):
     
     
     # Determine the top 25% threshold for Model Response
-    threshold = df['Model_Response'].quantile(0.70)
+    threshold = df['Model_Response'].quantile(0.75)
     
     # Select only the top 25% of Model Responses
     df = df[df['Model_Response'] >= threshold]
