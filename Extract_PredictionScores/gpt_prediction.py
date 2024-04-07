@@ -64,7 +64,6 @@ for pic in pic_dir:
     {"role": "system", "content": api_prompt}]
   )
 
-  # Assuming deterministic output for simplicity; you may need to adapt based on the actual response format
   output_text = response.choices[0].text.strip()
   print(f"{label}_{output_text}")
   all_corrs.append([f"{label}_{output_text}", condition])
