@@ -7,9 +7,6 @@ from scipy.stats import pearsonr, spearmanr
 def apply_gaussian_smoothing(heatmap, sigma=30):
     return gaussian_filter(heatmap, sigma=sigma)
 
-def apply_gaussian_smoothing_model(heatmap, sigma=30):
-    return gaussian_filter(heatmap, sigma=sigma)
-
 def calculate_probability_distribution(heatmap, show_plot=True):
     heatmap = apply_gaussian_smoothing(heatmap) #this is done before already 
     # Replace NaNs with 0 for probability distribution calculation
