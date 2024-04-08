@@ -8,7 +8,7 @@ def apply_gaussian_smoothing(heatmap, sigma=30):
     return gaussian_filter(heatmap, sigma=sigma)
 
 def calculate_probability_distribution(heatmap, show_plot=True):
-    heatmap = apply_gaussian_smoothing(heatmap) #this is done before already 
+    heatmap = apply_gaussian_smoothing(heatmap) 
     # Replace NaNs with 0 for probability distribution calculation
     prob_distribution = np.nan_to_num(heatmap.flatten(), nan=0.0)
     
@@ -189,9 +189,6 @@ for layer in layerwise_pearson:
 ##########################################################
 # BELOW ARE DIFFERENT WAYS OF COMPARING THE HEATMAPS #####
 # TO COMPARE VALUES DIRECTLY SEEMS THE MOST CONSERVATIVE # 
-# ALL WERE DONE IN OUR PREPRINT ##########################
-# BUT OTHER WAYS MAY ALSO MAKE SENSE #####################
-# DEPENDING ON WHAT YOU ARE INTERESTED IN ################
 ##########################################################
 
 ##################################
@@ -238,7 +235,6 @@ for layer, correlations in layerwise_correlations.items():
     print(f"  Direct Spearman correlation: {direct_correlation_spearman}, P-value: {p_value_spearman}")
 
     # Interpretation of the results
-    # Interpretation code here (similar to what you have already provided)
     # Interpret the Pearson result
     if p_value_pearson < 0.05:
         print("The direct Pearson correlation is statistically significant.")
