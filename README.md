@@ -30,4 +30,4 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 
 ### Runtime
 Depending on the hardware runtime can vary. Assuming a standard CPU based desktop computer, extracting predictions with the given examples may take up to 2 hours for the larger LLaMA model. The expected output is a list with the label and a prediction score for each segment. 
-All data analyses should not take longer than 1 hour to complete. 
+No data analysis should not take longer than 1 hour to complete. 
