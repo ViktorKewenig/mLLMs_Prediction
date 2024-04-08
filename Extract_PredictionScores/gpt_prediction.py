@@ -55,7 +55,7 @@ for pic in pic_dir:
     prompt=api_prompt,
     max_tokens=100,
     n=1,
-    seed=1,
+    seed=1,    #keeping seed and temperature parameters constant ensures reproducible, quasi-determinate response
     temperature=0,
     top_p=1.0,
     frequency_penalty=0.0,
@@ -127,11 +127,13 @@ for gif_filename in os.listdir(gif_dir):
           "role": "system",
           "content": {
             "type": "image_url",
-            "image_url": f"data:image/gif;base64,{base64_image}"
+            "image_url": f"data:image/gif;base64,{base64_image}" #this can be a GIF as well
           }
         }
       ],
-      "max_tokens": 300
+      max_tokens= 300,
+      seed=1,    #keeping seed and temperature parameters constant ensures reproducible, quasi-determinate response
+      temperature=0
     }
 
     # Make the API request
