@@ -5,7 +5,7 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 ## Usage
 
 ### Extracting Prediction Scores
-1. **Download Llama**: download and extract [LLaMA](https://huggingface.co/huggyllama/llama-7b) into the "Extract Prediction Scores" folder. Download the [LLaMA-Adapter](https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/llama_adapter_v2_multimodal7b) into the adapter folder in the same directory.
+1. **Download Llama**: download and extract [LLaMA](https://huggingface.co/huggyllama/llama-7b) into the "Extract Prediction Scores" folder. Download the [LLaMA-Adapter](https://github.com/OpenGVLab/LLaMA-Adapter/tree/main/llama_adapter_v2_multimodal7b) into the adapter folder in the same directory. Use the provided [llama folder](https://github.com/ViktorKewenig/mLLMs_Prediction/tree/main/Extract_PredictionScores/adapter/llama), as it contains custom forward functions (to return logits) for both the adapter and the unimodal LLaMA model
 2. **Modified CLIP**: Make sure you import CLIP from the modified version (in the folder called "clip"). The call to nn.MultiheadAttention in [model.py](https://github.com/openai/CLIP/blob/main/clip/model.py) passes `need_weights=True` (to record attention weights). 
 3. **Set OpenAI API Key Variable**: having an openAI API key is necessary for accessing GPT-4 and GPT-4 multimodal. If you have one, set it as an environmental variable.
 4. **Install Requirements**: pip install the requirements.txt file (add requirements for the CLIP model if not already done so). 
