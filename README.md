@@ -1,6 +1,6 @@
 # mLLMs Prediction
 
-This repository contains code used in the paper "Multimodality and Attention Increase Alignment in Natural Language Prediction Between Humans and Computational Models" by Viktor Kewenig, Andrew Lampinen, Samuel A. Nastase, Christopher Edwards, Quitterie D'Elascombe, Akilles Richardt, Jeremy I. Skipper and Gabriella Vigliocco
+This repository contains code used in the paper ["Multimodality and Attention Increase Alignment in Natural Language Prediction Between Humans and Computational Models"](https://arxiv.org/abs/2308.06035#:~:text=Humans%20are%20known%20to%20use,to%20assign%20next%2Dword%20probabilities.) by Viktor Kewenig, Andrew Lampinen, Samuel A. Nastase, Christopher Edwards, Quitterie D'Elascombe, Akilles Richardt, Jeremy I. Skipper and Gabriella Vigliocco
 
 ## Usage
 
