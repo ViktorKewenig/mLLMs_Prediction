@@ -29,5 +29,5 @@ This repository contains code used in the paper "Multimodality and Attention Inc
 2. **Hardware**: The use of GPUs speeds up the extraction of predictions process but is not necessary (simply change the device to "cpu" or "cuda" as appropriate).
 
 ### Runtime
-Depending on the hardware runtime can vary. Assuming a standard CPU based desktop computer, extracting predictions with the given examples may take up to 2 hours for the larger LLaMA model. The expected output is a list with the label and a prediction score for each segment. 
-No data analysis should not take longer than 1 hour to complete. 
+Depending on hardware, runtime can vary. Assuming a standard CPU based desktop computer, extracting predictions with the given examples may take up to 2 hours for the larger LLaMA model. The expected output is a list with the label and a prediction score for each segment. 
+No data analysis should take longer than 1 hour to complete. 
